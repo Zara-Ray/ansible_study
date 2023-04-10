@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: cache update
+    apt:
+      update_cache: yes
+
+- hosts: web
+  become: true
+  tasks:
+
+  - name: install apache
+    apt:
+      name: apache2
+      state: latest
