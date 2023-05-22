@@ -8,11 +8,39 @@
     apt:
       update_cache: yes
 
-- hosts: web
-  become: true
-  tasks:
+    roles:
+    - script-runner
+
 
   - name: install apache
     apt:
       name: apache2
       state: latest
+
+  - name: Copy HTML file
+      copy:
+        src: /path/to/html/file
+        dest: /var/www/html/index.html
+
+  - name: Install Nginx
+    apt:
+      name: nginx
+      state: present
+
+  - name: Start Nginx
+    service:
+      name: nginx
+      state: started
+
+   - name: Update packages
+      apt:
+        update_cache: yes
+      when: ansible_distribution == "Ubuntu"
+
+  - name: Install PHP
+      apt:
+        name: php
+        state: present
+      when: ansible_distribution == "Ubuntu"
+
+
