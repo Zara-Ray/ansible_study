@@ -10,27 +10,8 @@
 
     roles:
     - script-runner
-
-
-  - name: install apache
-    apt:
-      name: apache2
-      state: latest
-
-  - name: Copy HTML file
-      copy:
-        src: /path/to/html/file
-        dest: /var/www/html/index.html
-
-  - name: Install Nginx
-    apt:
-      name: nginx
-      state: present
-
-  - name: Start Nginx
-    service:
-      name: nginx
-      state: started
+    - apache
+    - nginx
 
    - name: Update packages
       apt:
