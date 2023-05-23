@@ -3,25 +3,23 @@
 - hosts: all
   become: true
   tasks:
-
   - name: cache update
     apt:
       update_cache: yes
 
-    roles:
-    - script-runner
-    - apache
-    - nginx
-
-   - name: Update packages
-      apt:
-        update_cache: yes
-      when: ansible_distribution == "Ubuntu"
+  - name: Update packages
+    apt:
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
 
   - name: Install PHP
-      apt:
-        name: php
-        state: present
-      when: ansible_distribution == "Ubuntu"
+    apt:
+      name: php
+      state: present
+    when: ansible_distribution == "Ubuntu"
 
 
+  roles:
+  - script-runner
+  - apache
+  - nginx

@@ -1,10 +1,10 @@
 # tasks file for apache
 - name: install apache
-   apt:
-     name: apache2
-     state: latest
+  apt:
+    name: apache2
+    state: latest
 
 - name: Copy HTML file
-    copy:
-      src: /home/phoenix/ansible_study/roles/apache/files/index.html
-      dest: /var/www/html/index.html
+  copy:
+    src: /home/phoenix/ansible_study/roles/apache/files/index.html
+    dest: /var/www/html/index.html
