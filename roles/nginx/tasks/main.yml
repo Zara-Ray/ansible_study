@@ -4,7 +4,17 @@
     name: nginx
     state: present
 
-- name: Start Nginx
-  service:
-    name: nginx
-    state: started
+#- name: Start Nginx service
+#  systemd:
+#    name: nginx
+#    state: started
+#    enabled: true
+
+- name: Copy updated nginx.conf
+  copy:
+    src: /etc/nginx/sites-available/default
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: Restart Nginx
