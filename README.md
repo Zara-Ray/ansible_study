@@ -1,2 +1,2 @@
 # ansible_study
-Learning ansible
+Learning ansible and playbooks
