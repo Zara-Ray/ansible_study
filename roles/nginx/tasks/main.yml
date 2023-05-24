@@ -4,11 +4,11 @@
     name: nginx
     state: present
 
-#- name: Start Nginx service
-#  systemd:
-#    name: nginx
-#    state: started
-#    enabled: true
+- name: Start Nginx service
+  systemd:
+    name: nginx
+    state: started
+    enabled: true
 
 - name: Copy updated nginx.conf
   copy:
