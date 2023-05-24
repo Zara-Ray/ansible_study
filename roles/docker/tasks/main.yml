@@ -1,0 +1,47 @@
+# tasks file for ../ansible_study/roles/docker
+---
+- name: Install Docker
+  become: true
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg
+      - lsb-release
+    state: present
+    update_cache: yes
+
+- name: Add Docker GPG key
+  become: true
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker APT repository
+  become: true
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
+    state: present
+
+- name: Install Docker Engine
+  become: true
+  apt:
+    name: docker-ce
+    state: present
+    update_cache: yes
+
+- name: Start and enable Docker service
+  become: true
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
+- name: Run Ubuntu container
+  become: true
+  docker_container:
+    name: ubuntu_container
+    image: ubuntu
+    state: started
+    command: sleep infinity

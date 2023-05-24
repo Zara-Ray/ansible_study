@@ -1,8 +1,18 @@
 # tasks file for apache
-- name: install apache
+- name: Install Apache
   apt:
     name: apache2
     state: latest
+    update_cache: yes
+
+- name: Configure Apache
+  template:
+    src: /etc/apache2/apache2.conf  # Change this to the path of your Apache configuration template
+    dest: /etc/apache2/apache2.conf  # Change this if your Apache configuration file path is different
+    owner: root
+    group: root
+    mode: '0644'
+  notify: Restart Apache
 
 - name: Copy HTML file
   copy:

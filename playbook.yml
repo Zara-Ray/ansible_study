@@ -2,7 +2,7 @@
 
 - hosts: all
   become: true
-  tasks:
+  pre-tasks:
   - name: Install PHP
     apt:
       name: php
@@ -11,6 +11,8 @@
 
 
   roles:
-#  - script-runner
+  - script-runner
   - apache
   - nginx
+  - terraform
+  - docker

@@ -1,0 +1,15 @@
+# tasks file for terraform
+- name: Install Terraform on Ubuntu
+  become: true
+  apt:
+    name: unzip
+    state: present
+    update_cache: yes
+  when: ansible_distribution == 'Ubuntu'
+
+- name: Install Terraform on CentOS
+  become: true
+  yum:
+    name: unzip
+    state: present
+  when: ansible_distribution == 'CentOS'
