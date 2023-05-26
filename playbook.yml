@@ -17,8 +17,8 @@
       when: ansible_facts['distribution'] == 'CentOS'
 
   roles:
-    #- script-runner
-    - apache
+#    - script-runner
+#    - apache
     - nginx
-    - terraform
-    - docker
+#    - terraform
+#    - docker

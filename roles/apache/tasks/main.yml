@@ -1,20 +1,21 @@
 # tasks file for apache
-- name: Install Apache
+- name: Install Apache (Ubuntu)
+  become: yes
   apt:
     name: apache2
     state: latest
     update_cache: yes
+  when: ansible_os_family == "Debian"
 
-- name: Configure Apache
-  template:
-    src: /etc/apache2/apache2.conf  # Change this to the path of your Apache configuration template
-    dest: /etc/apache2/apache2.conf  # Change this if your Apache configuration file path is different
-    owner: root
-    group: root
-    mode: '0644'
-  notify: Restart Apache
+- name: Install Apache (CentOS)
+  become: yes
+  package:
+    name: httpd
+    state: latest
+    update_cache: yes
+  when: ansible_os_family == "RedHat"
 
 - name: Copy HTML file
   copy:
-    src: /home/phoenix/ansible_study/roles/apache/files/index.html
+    src: /root/ansible/ansible_study/roles/apache/files/index.html
     dest: /var/www/html/index.html

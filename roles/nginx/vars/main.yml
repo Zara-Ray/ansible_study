@@ -1,2 +1,5 @@
----
 # vars file for nginx
+nginx_listen_port: 80
+nginx_server_name: example.com
+nginx_document_root: /var/www/html
+nginx_default_index: index.html
