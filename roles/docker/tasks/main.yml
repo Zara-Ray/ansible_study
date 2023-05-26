@@ -77,14 +77,14 @@
     state: started
     enabled: yes
 
-- name: Install Docker Python library
-  pip:
-    name: docker
-    state: present
+#- name: Install Docker Python library
+#  pip:
+#    name: docker
+#    state: present
 
-- name: Run Ubuntu container
-  docker_container:
-    name: ubuntu_container
-    image: ubuntu
-    state: started
-    command: sleep infinity
+#- name: Run Ubuntu container
+#  docker_container:
+#    name: ubuntu_container
+#    image: ubuntu
+#    state: started
+#    command: sleep infinity
