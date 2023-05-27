@@ -90,7 +90,7 @@ The images cover a wide range of activities, including:
 
   <img src="images/playbook_roles.png" width="500">
 
-- Playbook Execution with User
+- Playbook Execution 
 
   <img src="images/playbook_run_with_user.png" width="500">
 
@@ -122,4 +122,4 @@ The images cover a wide range of activities, including:
 
   <img src="images/user_on_slave_server_sign_in.png" width="500">
 
-These images serve as valuable references and insights into the diverse processes involved in server configuration and management, enabling effective understanding and implementation of the outlined procedures.
+These images serve as valuable references and insights into the diverse processes involved in server configuration and management, enabling effective understanding and implementation of the procedures.
