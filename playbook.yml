@@ -41,13 +41,13 @@
 #      when: ansible_os_family == "Archlinux"
 
 
-    - name: Install PHP on Ubuntu
+    - name: Install PHP on (Ubuntu)
       apt:
         name: php
         state: present
       when: ansible_facts['distribution'] == 'Ubuntu'
 
-    - name: Install PHP on CentOS
+    - name: Install PHP (CentOS)
       yum:
         name: php
         state: present
