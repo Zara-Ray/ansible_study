@@ -8,23 +8,14 @@ This Ansible playbook aims to configure and manage three servers: two Ubuntu ser
 
 - **Script Runner Role**: Executes a bash script or custom commands on the servers as needed.
 
-  <img src="images/script_runner_role.png" width="500">
-
 - **Apache Role**: Installs and configures Apache web server on the Ubuntu servers. Starts the Apache service and deploys web applications or static files.
-
-  <img src="images/apache_role.png" width="500">
 
 - **Nginx Role**: Installs and configures Nginx web server on the CentOS server. Starts the Nginx service and deploys web applications or static files.
 
-  <img src="images/nginx_role.png" width="500">
-
 - **Terraform Role**: Installs Terraform on the host server and manages infrastructure deployments using Terraform.
-
-  <img src="images/terraform_role.png" width="500">
 
 - **Docker Role**: Installs Docker on all servers and manages containers and containerized applications.
 
-  <img src="images/docker_role.png" width="500">
 
 ### Playbook Execution
 
