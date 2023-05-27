@@ -20,17 +20,21 @@ This Ansible playbook aims to configure and manage three servers: two Ubuntu ser
 ### Playbook Execution
 
 The playbook was executed as a unified playbook with the following structure for roles:
+---
+- hosts: all
+  become: true
+  gather_facts: true
 
-```yaml
-...
-
+  tasks:
+  ...
   roles:
     - script-runner
     - apache
     - nginx
     - terraform
     - docker
-```
+    ...
+
 
 ### Conclusion
 
