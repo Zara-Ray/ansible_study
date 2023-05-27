@@ -20,6 +20,7 @@ This Ansible playbook aims to configure and manage three servers: two Ubuntu ser
 ### Playbook Execution
 
 The playbook was executed as a unified playbook with the following structure for roles:
+
 ---
 - hosts: all
   become: true
@@ -27,13 +28,14 @@ The playbook was executed as a unified playbook with the following structure for
 
   tasks:
   ...
+
   roles:
     - script-runner
     - apache
     - nginx
     - terraform
     - docker
-    ...
+  ...
 
 
 ### Conclusion
