@@ -21,6 +21,7 @@ This Ansible playbook aims to configure and manage three servers: two Ubuntu ser
 
 The playbook was executed as a unified playbook with the following structure for roles:
 
+```yaml
 ---
 - hosts: all
   become: true
@@ -37,6 +38,7 @@ The playbook was executed as a unified playbook with the following structure for
     - docker
   ...
 
+```
 
 ### Conclusion
 
