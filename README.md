@@ -46,11 +46,7 @@ Through the utilization of this Ansible playbook, the servers were efficiently c
 
 <img src="images/apache_installed_on_host_server.png" width="500"> <img src="images/hosted_page_on_host_server.png" width="500">
 
-Similarly, the **nginx** role proficiently handled the installation and configuration of the Nginx web server.
-
 <img src="images/apache_installed_on_server.png" width="500"> <img src="images/hosted_page_on_server.png" width="500">
-
-Furthermore, the **terraform** and **docker** roles played vital roles in facilitating infrastructure management and containerization, respectively.
 
 <img src="images/apache_installed_on_workserver.png" width="500"> <img src="images/hosted_page_on_workserver.png" width="500">
 
