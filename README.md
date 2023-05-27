@@ -28,7 +28,7 @@ The playbook was executed as a unified playbook with the following structure for
   gather_facts: true
 
   tasks:
-  ...
+ ...
 
   roles:
     - script-runner
@@ -36,7 +36,7 @@ The playbook was executed as a unified playbook with the following structure for
     - nginx
     - terraform
     - docker
-  ...
+ ...
 
 ```
 
