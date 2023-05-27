@@ -62,7 +62,7 @@ The images cover a wide range of activities, including:
 
 - Creation of Servers
 
-  <img src="images/created_servers.png" width="500">
+  <img src="images/created_servers.png" width="500"> <img src="images/running_servers.png" width="500">
 
 - User Creation
 
@@ -72,9 +72,7 @@ The images cover a wide range of activities, including:
 
   <img src="images/hosting_page_via_apache.png" width="500">
 
-- Execution
-
- of Playbook Apache Role
+- Execution of Playbook Apache Role
 
   <img src="images/playbook_apache_role.png" width="500">
 
