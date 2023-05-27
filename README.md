@@ -22,8 +22,8 @@ This Ansible playbook aims to configure and manage three servers: two Ubuntu ser
 The playbook was executed as a unified playbook with the following structure for roles:
 
 ```yaml
-- name: Server Configuration, Web Server Deployment, and Multiple Roles
-  hosts: all
+...
+
   roles:
     - script-runner
     - apache
