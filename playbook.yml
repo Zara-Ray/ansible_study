@@ -28,17 +28,17 @@
         autoclean: yes
       when: ansible_os_family == "Debian"
 
-    - name: Update system packages (SUSE)
-      zypper:
-        name: "*"
-        state: latest
-      when: ansible_os_family == "Suse"
+#    - name: Update system packages (SUSE)
+#      zypper:
+#        name: "*"
+#        state: latest
+#      when: ansible_os_family == "Suse"
 
-    - name: Update system packages (Arch Linux)
-      package:
-        name: "*"
-        state: latest
-      when: ansible_os_family == "Archlinux"
+#    - name: Update system packages (Arch Linux)
+#      package:
+#        name: "*"
+#        state: latest
+#      when: ansible_os_family == "Archlinux"
 
 
     - name: Install PHP on Ubuntu
@@ -54,8 +54,8 @@
       when: ansible_facts['distribution'] == 'CentOS'
 
   roles:
-#    - script-runner
-#    - apache
-#    - nginx
-#    - terraform
-#    - docker
+    - script-runner
+    - apache
+    - nginx
+    - terraform
+    - docker
