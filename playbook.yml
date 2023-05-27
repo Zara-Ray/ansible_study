@@ -41,21 +41,21 @@
 #      when: ansible_os_family == "Archlinux"
 
 
-    - name: Install PHP on (Ubuntu)
-      apt:
-        name: php
-        state: present
-      when: ansible_facts['distribution'] == 'Ubuntu'
+#    - name: Install PHP on (Ubuntu)
+#      apt:
+#        name: php
+#        state: present
+#      when: ansible_facts['distribution'] == 'Ubuntu'
 
-    - name: Install PHP (CentOS)
-      yum:
-        name: php
-        state: present
-      when: ansible_facts['distribution'] == 'CentOS'
+#    - name: Install PHP (CentOS)
+#      yum:
+#        name: php
+#        state: present
+#      when: ansible_facts['distribution'] == 'CentOS'
 
   roles:
-    - script-runner
-    - apache
+#    - script-runner
+#    - apache
     - nginx
-    - terraform
-    - docker
+#    - terraform
+#    - docker

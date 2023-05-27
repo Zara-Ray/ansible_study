@@ -41,7 +41,7 @@
 - name: Copy and modify nginx default configuration file
   become: yes
   template:
-    src: /root/ansible/ansible_study/templates/nginx.conf.j2
+    src: index.html
     dest: /etc/nginx/sites-available/default
     owner: root
     group: root

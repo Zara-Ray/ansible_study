@@ -42,11 +42,11 @@ The playbook was executed as a unified playbook with the following structure for
 
 ### Conclusion
 
-Through the utilization of this Ansible playbook, the servers were efficiently configured and managed using distinct roles. The **script-runner** role successfully executed bash scripts or custom commands, while the **apache** role effectively installed and configured the Apache web server.
+Through the utilization of this Ansible playbook, the servers were efficiently configured and managed using distinct roles. The **script-runner** role successfully executed bash scripts or custom commands, while the **apache** role effectively installed and configured the Apache and Nginx web servers.
 
 <img src="images/apache_installed_on_host_server.png" width="500"> <img src="images/hosted_page_on_host_server.png" width="500">
 
-<img src="images/apache_installed_on_server.png" width="500"> <img src="images/hosted_page_on_server.png" width="500">
+<img src="images/default_nginx_page.png" width="500"> <img src="images/hosted_page_on_server.png" width="500">
 
 <img src="images/apache_installed_on_workserver.png" width="500"> <img src="images/hosted_page_on_workserver.png" width="500">
 
